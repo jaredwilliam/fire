@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<main>
+    <h2>Calculation Results</h2>
+    <div>
+        <p><strong>Message:</strong> {{ results.message }}</p>
+        <p><strong>Current Age:</strong> {{ results.current_age }}</p>
+        <p><strong>Desired Retirement Age:</strong> {{ results.retirement_age }}</p>
+        <p><strong>Current Savings:</strong> {{ results.current_savings }}</p>
+    </div>
+    <a href=""{{ url_for('main.index') }}>Go Back</a>
+</main>
+{% endblock %}

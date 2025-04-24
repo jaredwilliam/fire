@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}Home - FIRE Program{% endblock %}
+
+{% block content %}
+<main>
+    <h2>FIRE Program Calculator</h2>
+    <form action="{{ url_for('main.calculate') }}" method="post">
+        <!-- Form fields for user inputs -->
+        <label for="current_age">Current Agge:</label> 
+        <input type="number" id="current_age" name="current_age" required><br>
+
+        <label for="retirement_age">Desired Retirement Age:</label>
+        <input type="number" id="retirement_age" name="retirement_age" required><br>
+
+        <label for="current_savings">Current Savings:</label>
+        <input type="number" id="current_savings" name="current_savings" required><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Calculate</button>
+    </form>
+</main>
+{% endblock %}
